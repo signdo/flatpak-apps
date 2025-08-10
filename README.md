@@ -10,9 +10,10 @@ A collection of flatpak wrapped GUI apps.
 
 ## Usage
 
-1. Enter a APP project, such as `net.huangyuhui.HMCL`.
-2. Run script `build.sh` and waiting for finish.
-3. Run command `flatpak install net.huangyuhui.HMCL.flatpak` to install APP. Or you can install [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse) then double click file `net.huangyuhui.HMCL.flatpak` to install it.
+1. Run command `git clone https://github.com/signdo/flatpak-apps.git`
+2. Enter a APP project, such as `cd ./flatpak-apps/net.huangyuhui.HMCL`.
+3. Run script `./build.sh` and waiting for finish.
+4. Run command `flatpak install --user net.huangyuhui.HMCL.flatpak` to install APP. Or you can install [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse) then double click file `net.huangyuhui.HMCL.flatpak` to install it.
 
 ## App List
 
