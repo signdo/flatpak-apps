@@ -2,3 +2,5 @@
 /**/repo
 /**/.flatpak-builder
 /**/*.flatpak
+/**/*.sha1
+

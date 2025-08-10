@@ -26,8 +26,7 @@ modules:
 
       - chmod +x ./FlClash.AppImage
       - ./FlClash.AppImage --appimage-extract
-      - mkdir -m755 /app/bin
-      - mv squashfs-root/* /app/bin/
+      - mv squashfs-root /app/bin
     sources:
       - type: file
         dest-filename: FlClash.AppImage
