@@ -1,0 +1,45 @@
+id: io.github.chen08209.FlClash
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+separate-locales: false
+command: AppRun
+
+finish-args:
+  - --share=network
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --talk-name=org.kde.StatusNotifierWatcher
+  - --talk-name=org.freedesktop.Notifications
+  - --own-name=com.follow.clash
+  - --system-talk-name=org.freedesktop.login1
+
+modules:
+  - name: FlClash
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 io.github.chen08209.FlClash.desktop -t /app/share/applications
+      - install -Dm644 io.github.chen08209.FlClash.png -t /app/share/icons/hicolor/512x512/apps
+      - install -Dm644 io.github.chen08209.FlClash.metainfo.xml -t /app/share/metainfo
+
+      - chmod +x ./FlClash.AppImage
+      - ./FlClash.AppImage --appimage-extract
+      - mkdir -m755 /app/bin
+      - mv squashfs-root/* /app/bin/
+    sources:
+      - type: file
+        dest-filename: FlClash.AppImage
+        url: https://github.com/chen08209/FlClash/releases/download/v0.8.87/FlClash-0.8.87-linux-amd64.AppImage
+        sha256: b6d016d0cc85f0f76cc1f7b6fc5407d1f7a328dce36076b5e35255eb744942d5
+        only-arches:
+          - x86_64
+
+      - type: file
+        path: io.github.chen08209.FlClash.desktop
+      - type: file
+        path: io.github.chen08209.FlClash.png
+      - type: file
+        path: io.github.chen08209.FlClash.metainfo.xml
+

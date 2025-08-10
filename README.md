@@ -8,9 +8,13 @@ A collection of flatpak wrapped GUI apps.
 
 Hello Minecraft Launcher
 
-## Build Requirement
+- [FlClash](io.github.chen08209.FlClash/README.md)
 
-- `flatpak-builder`
+A network proxy tool for bypass GFW.
+
+## Requirement
+
+- Command tool `flatpak-builder`.
 - A good Internet access that can download files from Github via command line.
 - [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse) is optional.
 
