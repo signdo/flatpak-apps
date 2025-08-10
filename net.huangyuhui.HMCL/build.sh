@@ -17,3 +17,5 @@ flatpak-builder --force-clean --install-deps-from=flathub --repo=repo builddir $
 # flatpak build-bundle $HOME/.local/share/flatpak/repo ${FLATPAK_APPID}.flatpak ${FLATPAK_APPID} master --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
 flatpak build-bundle repo ${FLATPAK_APPID}.flatpak ${FLATPAK_APPID} master --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo
 
+# Create hash file
+sha1sum ${FLATPAK_APPID}.flatpak > ${FLATPAK_APPID}.flatpak.sha1
