@@ -4,7 +4,7 @@ A collection of flatpak wrapped GUI apps.
 
 ## Requirement
 
-- Command tool `flatpak-builder`.
+- Command tool `flatpak-builder`. [(Building Introduction)](https://docs.flatpak.org/en/latest/building-introduction.html)
 - A good Internet access that can download files from Github via command line.
 - [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse) is recommended.
 
