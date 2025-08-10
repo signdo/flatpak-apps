@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=HMCL
+GenericName=HMCL
+Icon=net.huangyuhui.HMCL
+Exec=HMCL %U
+Categories=Game;Java;
+Keywords=Minecraft;HMCL;Game;
+StartupNotify=true
+Terminal=false
+SingleMainWindow=true

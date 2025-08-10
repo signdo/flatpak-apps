@@ -1,0 +1,46 @@
+id: net.huangyuhui.HMCL
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.openjdk21
+separate-locales: false
+command: HMCL
+
+finish-args:
+  - --socket=x11
+  - --device=dri
+  - --socket=pulseaudio
+  - --share=network
+  - --share=ipc # Required due to x11
+  - --env=PATH=/app/bin:/app/jre/bin:/usr/bin
+  - --env=JAVA_HOME=/app/jre
+  - --filesystem=~/.var/app/com.mojang.Minecraft/.minecraft
+  - --persist=.
+
+modules:
+  - name: openjdk
+    buildsystem: simple
+    build-commands:
+      - /usr/lib/sdk/openjdk21/install.sh
+
+  - name: HMCL
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 -t /app/share/applications net.huangyuhui.HMCL.desktop
+      - install -Dm644 -t /app/share/icons/hicolor/256x256/apps net.huangyuhui.HMCL.png
+      - install -Dm644 -t /app/share/metainfo net.huangyuhui.HMCL.metainfo.xml
+      - install -Dm755 ./HMCL.sh /app/bin/HMCL
+    sources:
+      - type: file
+        dest-filename: HMCL.sh
+        url: https://github.com/HMCL-dev/HMCL/releases/download/release-3.6.15/HMCL-3.6.15.sh
+        sha256: 2e09149d7158749aac27a52fd395872abdfb3c3a18dec01d18085f7ecc5a530c
+
+      - type: file
+        path: net.huangyuhui.HMCL.desktop
+      - type: file
+        path: net.huangyuhui.HMCL.png
+      - type: file
+        path: net.huangyuhui.HMCL.metainfo.xml
+

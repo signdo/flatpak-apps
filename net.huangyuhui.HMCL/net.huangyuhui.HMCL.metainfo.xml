@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>net.huangyuhui.HMCL</id>
+  <developer id="net.huangyuhui.HMCL">
+    <name>Yuhui Huang</name>
+  </developer>
+  <launchable type="desktop-id">net.huangyuhui.HMCL.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <name>HMCL</name>
+  <summary>Hello Minecraft! Launcher</summary>
+  <description>
+    <p>
+        HMCL is an open-source, cross-platform Minecraft launcher that supports Mod Management, Game Customizing, ModLoader Installing (Forge, NeoForge, Fabric, Quilt, LiteLoader, and OptiFine), Modpack Creating, UI Customization, and more.
+    </p>
+    <p>
+        HMCL has amazing cross-platform capabilities. Not only does it run on different operating systems like Windows, Linux, and macOS, but it also supports various CPU architectures such as x86, ARM, RISC-V, MIPS, and LoongArch. You can easily enjoy Minecraft across different platforms through HMCL.
+    </p>
+    <p>
+        For systems and CPU architectures supported by HMCL, please refer to <a href="https://github.com/HMCL-dev/HMCL/blob/main/PLATFORM.md">this table</a>.
+    </p>
+  </description>
+  <categories>
+    <category>Games</category>
+  </categories>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://hmcl.huangyuhui.net/assets/img/main_page.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://hmcl.huangyuhui.net/</url>
+  <url type="bugtracker">https://github.com/HMCL-dev/HMCL/issues</url>
+  <releases>
+    <release version="v3.6.15" date="2025-07-19"/>
+  </releases>
+  <content_rating type="oars-1.1"/>
+</component>
