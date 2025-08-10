@@ -16,7 +16,7 @@ A network proxy tool for bypass GFW.
 
 - Command tool `flatpak-builder`.
 - A good Internet access that can download files from Github via command line.
-- [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse) is optional.
+- [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse) is recommended.
 
 ## Usage
 
