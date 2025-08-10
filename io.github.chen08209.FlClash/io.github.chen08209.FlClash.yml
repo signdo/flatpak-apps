@@ -1,6 +1,6 @@
 id: io.github.chen08209.FlClash
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 command: AppRun
