@@ -1,0 +1,47 @@
+id: io.github.c0re100.qBittorrentEnhancedEdition
+runtime: org.kde.Platform
+runtime-version: '6.9'
+sdk: org.kde.Sdk
+separate-locales: false
+command: AppRun
+
+finish-args:
+  - --device=dri
+  - --filesystem=xdg-download
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --system-talk-name=org.freedesktop.login1
+  - --system-talk-name=org.freedesktop.UPower
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.freedesktop.PowerManagement
+  - --talk-name=org.gnome.SessionManager
+  - --talk-name=org.kde.StatusNotifierWatcher
+
+modules:
+  - name: qBittorrentEnhancedEdition
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 io.github.c0re100.qBittorrentEnhancedEdition.desktop -t /app/share/applications
+      - install -Dm644 io.github.c0re100.qBittorrentEnhancedEdition.svg -t /app/share/icons/hicolor/scalable/apps
+      - install -Dm644 io.github.c0re100.qBittorrentEnhancedEdition.metainfo.xml -t /app/share/metainfo
+
+      - chmod +x ./qBittorrentEnhancedEdition.AppImage
+      - ./qBittorrentEnhancedEdition.AppImage --appimage-extract
+      - mv squashfs-root /app/bin
+    sources:
+      - type: file
+        dest-filename: qBittorrentEnhancedEdition.AppImage
+        url: https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-5.1.2.10/qBittorrent-Enhanced-Edition-x86_64.AppImage
+        sha256: e9257774385715e14c39e04b977a74fd792716d046a3c0fe1ddc2a9cadfb94e3
+        only-arches:
+          - x86_64
+
+      - type: file
+        path: io.github.c0re100.qBittorrentEnhancedEdition.desktop
+      - type: file
+        path: io.github.c0re100.qBittorrentEnhancedEdition.svg
+      - type: file
+        path: io.github.c0re100.qBittorrentEnhancedEdition.metainfo.xml
+

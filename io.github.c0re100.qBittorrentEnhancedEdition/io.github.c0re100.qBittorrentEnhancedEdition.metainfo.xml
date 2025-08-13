@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.c0re100.qBittorrentEnhancedEdition</id>
+  <developer id="io.github.c0re100">
+    <name>c0re100</name>
+  </developer>
+  <launchable type="desktop-id">io.github.c0re100.qBittorrentEnhancedEdition.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <name>qBittorrent Enhanced Edition</name>
+  <summary>[Unofficial] qBittorrent Enhanced, based on qBittorrent</summary>
+  <description>
+    <p>qBittorrent is a bittorrent client programmed in C++ / Qt that uses libtorrent
+(sometimes called libtorrent-rasterbar) by Arvid Norberg.</p>
+    <br>
+    <p>It aims to be a good alternative to all other bittorrent clients out there. qBittorrent is fast,
+stable and provides unicode support as well as many features.</p>
+    <h2>Features:</h2>
+    <ol>
+      <li>Auto Ban Xunlei, QQ, Baidu, Xfplay, DLBT and Offline downloader</li>
+      <li>Auto Ban Unknown Peer from China Option (Default: OFF)</li>
+      <li>Auto Ban BitTorrent Media Player Peer Option (Default: OFF)</li>
+      <li>Peer whitelist/blacklist</li>
+    </ol>
+  </description>
+  <categories>
+    <category>Network</category>
+    <category>FileTransfer</category>
+    <category>P2P</category>
+  </categories>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.qbittorrent.org/img/screenshots/linux/1.webp</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://github.com/c0re100/qBittorrent-Enhanced-Edition</url>
+  <url type="bugtracker">https://github.com/c0re100/qBittorrent-Enhanced-Edition/issues</url>
+  <releases>
+    <release version="v5.1.2.10" date="2025-07-9"/>
+  </releases>
+  <content_rating type="oars-1.1"/>
+</component>
